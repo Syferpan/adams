@@ -1,0 +1,19 @@
+.layout-header {
+    grid-area: header;
+}
+.layout-content {
+    grid-area: content;
+}
+.layout-footer {
+    grid-area: footer;
+}
+
+.layout-wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-areas:
+            "header"
+            "content"
+            "footer";
+}

@@ -1,0 +1,54 @@
+.father {
+    grid-area: father;
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+.mother {
+    grid-area: mother;
+    border: 2px solid;
+    border-radius: 15px;
+}
+.main {
+    grid-area: main;
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+.children {
+    grid-area: children;
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+.none-left {
+    grid-area: left;
+    background-color: #ffffff;
+}
+
+.none-right {
+    grid-area: right;
+    background-color: #ffffff;
+}
+
+.none-middle {
+    grid-area: middle;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas:    "left   father    middle      mother    right"
+                            "left   main      main        main      right"
+                            "left   children  children    children  right";
+
+
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+}

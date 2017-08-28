@@ -1,6 +1,5 @@
 import React from "react"
-
-import './layout.css';
+import './Layout.css';
 
 export const Wrapper = ( props )  =>(
     <div className="layout-wrapper">
@@ -9,20 +8,27 @@ export const Wrapper = ( props )  =>(
 );
 
 export const Header = ( props )  =>(
-    <div className="layout-header">
+    <div style={{gridArea: 'head', ...props.style}}>
+        { props.children }
+    </div>
+);
+
+
+export const Side = ( props )  =>(
+    <div style={{gridArea: 'side', ...props.style}}>
         { props.children }
     </div>
 );
 
 
 export const Content = ( props )  =>(
-    <div className="layout-content">
+    <div style={{gridArea: 'main', ...props.style}}>
         { props.children }
     </div>
 );
 
 export const Footer = ( props )  =>(
-    <div className="layout-footer">
+    <div style={{gridArea: 'foot', ...props.style}}>
         { props.children }
     </div>
 );
